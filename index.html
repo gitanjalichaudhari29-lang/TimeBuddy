@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeBuddy - Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TimeBuddy</h1>
+        <p>Your Personal Study Planner and Reminder</p>
+        <p>Plan Your Day, Manage Your Time!</p>
+    </header>
+
+    <main>
+        <section id="reminders">
+            <h2>Daily Reminders</h2>
+            <p>Add a task and TimeBuddy will speak when it is time.</p>
+
+            <label for="task">Task Name:</label>
+            <input type="text" id="task" placeholder="Example: Study Maths">
+
+            <label for="time">Reminder Time:</label>
+            <input type="time" id="time">
+
+            <button type="button" onclick="enableVoiceReminders()">
+                Enable Voice Reminders
+            </button>
+
+            <button type="button" onclick="testVoice()">
+                Test Voice
+            </button>
+
+            <button type="button" onclick="addTask()">
+                Add Task
+            </button>
+
+            <p id="voiceStatus">Voice reminders are not enabled yet.</p>
+
+            <h3>My Reminders</h3>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="notes">
+            <h2>My Notes</h2>
+            <p>Save your important study notes here.</p>
+
+            <label for="noteTitle">Note Title:</label>
+            <input type="text" id="noteTitle" placeholder="Enter note title">
+
+            <label for="noteText">Write Your Note:</label>
+            <textarea id="noteText" rows="5" placeholder="Write your notes here"></textarea>
+
+            <button type="button" onclick="saveNote()">Save Note</button>
+
+            <h3>Saved Notes</h3>
+            <ul id="noteList"></ul>
+        </section>
+
+        <section id="documents">
+            <h2>Important Documents</h2>
+            <p>Save and download documents in this browser.</p>
+
+            <label for="file">Choose a Document:</label>
+            <input type="file" id="file">
+
+            <button type="button" onclick="saveDocument()">Save Document</button>
+
+            <h3>My Documents</h3>
+            <ul id="documentList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TimeBuddy | Your Daily Study Partner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
